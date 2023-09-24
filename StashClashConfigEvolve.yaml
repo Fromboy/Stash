@@ -1,6 +1,14 @@
-# Stash/Clash/Premium/Meta Config Make by Coldvvater
-# GitHub: https://github.com/Coldvvater
 # Update Date: 2023.09.06
+# 本配置为自己写的自用配置修改成的模板，不适合所有者，请酌情使用，使用请详细阅读以下说明
+# 将proxy-providers里面链接中的“订阅链接”替换即可
+# 下载(View raw)Config for Stash.yaml导入，然后打开编辑，根据内容提示替换链接即可，一定要注意不要粘贴重复的空格之类的
+# 策略组使用Stash的引用ICON功能，ICON(图标)库采用Koolson的Qure Color，在其他Clash客户端中使用不会显示图标
+# 更新节点
+# -----------------------------------⚠请注意⚠---------------------------------------------------------------
+# 低于iOS15请不要使用本配置，由于iOS严格限制NE内存，iOS15以下NE内存分配15M(iOS15为50M)，
+# 且Clash内核相对占用内存增大，规则过多在低于iOS15的设备上无法启动，
+# 低于iOS15的越狱设备可自行修改NE内存限制后使用，方法自行谷歌搜索，建议至少改成100M+
+# 后续更新节点通过启动策略后组左上角更新外部资源即可
 
 # 自选GEOIP数据库推荐使用: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb
 
@@ -48,7 +56,7 @@ proxies:   # 本地服务器
 # 订阅引用相关
 u: &u {type: select, use: [Subscribe]}
 
-proxy-providers: # 远程订阅
+proxy-providers: # 远程订阅⚠订阅链接填入引号""内使用,
   Subscribe: {<<: *p, path: ./proxy_providers/subscribe.yaml, url: ""}
 # 1. 请使用Clash类型订阅链接填入引号""内使用,
 # 2. 或可使用通用订阅链接通过Sub-Store进行订阅转换(用于Stash)。
